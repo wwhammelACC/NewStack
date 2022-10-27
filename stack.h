@@ -27,7 +27,7 @@ public:
     ~Stack();
     
     bool push(int, string*); // pushing intergers and strings
-    bool peak(Data*); // looking whats in stack
+    bool peek(Data*); // looking whats in stack
     bool pop(Data*); // removing from stack
     bool isEmpty();
 
