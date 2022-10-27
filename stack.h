@@ -21,6 +21,16 @@ public:
      * write all your public method prototypes here
      * this includes you constructor and destructor
      */
+    //constructor
+    Stack(int);
+    //destructor
+    ~Stack();
+    
+    bool push(int, string*); // pushing intergers and strings
+    bool peak(Data*); // looking whats in stack
+    bool pop(Data*); // removing from stack
+    bool isEmpty();
+
     
 private:
 
