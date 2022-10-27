@@ -12,6 +12,10 @@
  */
 
 #include "data.h"
+#include <iostream>     /* cout, endl */
+
+using std::cout;
+using std::endl;
 
 class Stack {
 
