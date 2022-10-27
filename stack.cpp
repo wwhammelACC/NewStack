@@ -21,20 +21,23 @@ Stack::~Stack(){
 // PUSH METHOD
 
 bool Stack::push(int id, std::string *str){
-
+    bool pushed = false;
     cout << "push test line " << endl;
+    return pushed;
 }
 
 // POP METHOD
 bool Stack::pop(Data *ref){
-
+    bool popped = false;
     cout << "pop method test line " << endl;
+    return popped;
 }
 
 // PEEK METHOD
 bool Stack::peek(Data *ref){
-
+    bool peeked = false;
     cout << "peek method test line " << endl;
+    return peeked;
 }
 
 // ISEMPTY METHOD
