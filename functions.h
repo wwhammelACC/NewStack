@@ -14,5 +14,6 @@
 #include <string>     /* string */
 
 void rand_string(std::string*);
+bool is_positive(char*);
 
 #endif /* STACKS_FUNCTIONS_H */
