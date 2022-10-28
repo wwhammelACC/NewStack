@@ -79,9 +79,9 @@ int main(int argc, char **argv) {
             Stack stack(size);
             srand(time(NULL));
 
-            cout << std::endl;
-            cout << "Initial Testing of push, peek, pop and isEmpty" << std::endl;
-            cout << std::endl;
+            cout << endl;
+            cout << "Initial Testing of push, peek, pop and isEmpty" << endl;
+            cout << endl;
 
             // initial push testing
             string strtemp;
@@ -97,22 +97,26 @@ int main(int argc, char **argv) {
 //                }
 //
 //            }
+            cout << endl;
 
             // initial peek testing
             Data *userData; // create variable pointer to empty Data struct
             userData = new Data; // userData is empty struct
-            std::cout << std::endl;
-            std::cout << "Testing peek function.." << std::endl;
-            std::cout << "Peeking...." << std::endl;
+            cout << endl;
+            cout << "Testing peek method.." << endl;
+            cout << "Peeking...." << endl;
             stack.peek(userData);
+            cout << endl;
 
             // initial pop testing
-//            Data *userData; // create variable pointer to empty Data struct
-//            userData = new Data; // userData is empty struct i think
-//            std::cout << "Testing pop function.. " << std::endl;
-//            stack.pop(userData);
-            // initial isEmpty testing
+            cout << "Testing pop method.. " << endl;
+            stack.pop(userData);
+            cout << endl;
 
+            // initial isEmpty testing
+            cout << "Testing isEmpty method.. " << endl;
+            stack.isEmpty();
+            cout << endl;
         }
 
     }
