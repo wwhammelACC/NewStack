@@ -13,7 +13,7 @@
 #include <iostream>   /* cout, endl */
 #include <string>     /* string */
 #include "functions.h"
-
+#include "stack.h"
 /*
  * additional directives here
  * 
