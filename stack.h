@@ -14,6 +14,8 @@
 #include "data.h"
 #include <iostream>     /* cout, endl */
 
+#define DEFAULT 2
+
 using std::cout;
 using std::endl;
 
