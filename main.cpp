@@ -71,7 +71,7 @@ int main(int argc, char **argv) {
     // atoi converts string to integers
     // WHEN YOU SUBMIT, DELETE ALL THESE INSTRUCTIONALCOMMENTS
     if(argc == 2){
-        bool pos = is_positive_integer(argv[1]);
+        bool pos = is_positive(argv[1]);
         if(size >= 2 && pos == true){
             // create stack
             int size = atoi(argv[1]);
@@ -81,6 +81,16 @@ int main(int argc, char **argv) {
             cout << std::endl;
             cout << "Initial Testing of push, peek, pop and isEmpty" << std::endl;
             cout << std::endl;
+
+            // initial push testing
+
+            // initial peek testing
+
+            // initial pop testing
+
+            // initial isEmpty testing
+
+
     }
 
     return 0;
