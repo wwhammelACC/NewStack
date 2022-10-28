@@ -87,16 +87,16 @@ int main(int argc, char **argv) {
             string strtemp;
             int i = 1;
             stack.push(i, &strtemp);
-//            for(int i=1; i<size; i++){
-//                rand_string(&strtemp);
-//                if(strtemp.empty() || i<0){
-//                    std::cout << "Error. Int for id must be greater than 0 "
-//                                 "and string information cannot be empty." << std::endl;
-//                }else{
-//                    stack.push(i, &strtemp);
-//                }
-//
-//            }
+            for(int i=1; i<size; i++){
+                rand_string(&strtemp);
+                if(strtemp.empty() || i<0){
+                    std::cout << "Error. Int for id must be greater than 0 "
+                                 "and string information cannot be empty." << std::endl;
+                }else{
+                    stack.push(i, &strtemp);
+                }
+
+            }
             cout << endl;
 
             // initial peek testing
