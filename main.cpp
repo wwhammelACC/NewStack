@@ -71,6 +71,7 @@ int main(int argc, char **argv) {
     // atoi converts string to integers
     // WHEN YOU SUBMIT, DELETE ALL THESE INSTRUCTIONALCOMMENTS
     if(argc == 2){
+        int size = atoi(argv[1]);
         bool pos = is_positive(argv[1]); // tests that input is positive
         if(size >= 2 && pos == true){
             // create stack
@@ -85,7 +86,7 @@ int main(int argc, char **argv) {
             // initial push testing
             string strtemp;
             for(int i=1; i<size; i++){
-                randString(&strtemp);
+                rand_string(&strtemp);
                 if(strtemp.empty() || i<0){
                     std::cout << "Error. Int for id must be greater than 0 "
                                  "and string information cannot be empty." << std::endl;
