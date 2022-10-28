@@ -8,7 +8,7 @@
 int main(int argc, char **argv) {
     // here for the rand_string() function
     // if you don't use it, get rid of this
-    srand(time(NULL));
+    //srand(time(NULL));
 
     /* ***************************************************************
      * First get your arguments from the command line. Your program must
@@ -54,11 +54,11 @@ int main(int argc, char **argv) {
      * ***************************************************************/
     
     // make 20 random strings, store them, display them
-    std::string strtemp;
-    for(int i=0; i<20; i++){
-        rand_string(&strtemp);
-        std::cout << strtemp << std::endl;
-    }
+//    std::string strtemp;
+//    for(int i=0; i<20; i++){
+//        rand_string(&strtemp);
+//        std::cout << strtemp << std::endl;
+//    }
     
     /* ***************************************************************
      * Your code will be tested by applying your stack to a custom main
@@ -85,21 +85,32 @@ int main(int argc, char **argv) {
 
             // initial push testing
             string strtemp;
-            for(int i=1; i<size; i++){
-                rand_string(&strtemp);
-                if(strtemp.empty() || i<0){
-                    std::cout << "Error. Int for id must be greater than 0 "
-                                 "and string information cannot be empty." << std::endl;
-                }else{
-                    stack.push(i, &strtemp);
-                }
-
-            }
+            int i = 1;
+            stack.push(i, &strtemp);
+//            for(int i=1; i<size; i++){
+//                rand_string(&strtemp);
+//                if(strtemp.empty() || i<0){
+//                    std::cout << "Error. Int for id must be greater than 0 "
+//                                 "and string information cannot be empty." << std::endl;
+//                }else{
+//                    stack.push(i, &strtemp);
+//                }
+//
+//            }
 
             // initial peek testing
+            Data *userData; // create variable pointer to empty Data struct
+            userData = new Data; // userData is empty struct
+            std::cout << std::endl;
+            std::cout << "Testing peek function.." << std::endl;
+            std::cout << "Peeking...." << std::endl;
+            stack.peek(userData);
 
             // initial pop testing
-
+//            Data *userData; // create variable pointer to empty Data struct
+//            userData = new Data; // userData is empty struct i think
+//            std::cout << "Testing pop function.. " << std::endl;
+//            stack.pop(userData);
             // initial isEmpty testing
 
         }
