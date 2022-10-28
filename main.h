@@ -21,5 +21,6 @@
 
 using std::cout;
 using std::endl;
+using std::string;
 
 #endif /* STACKS_MAIN_H */
