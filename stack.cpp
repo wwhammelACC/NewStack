@@ -12,10 +12,21 @@
 
 Stack::Stack(int userSize){
     cout << "constructor test line " << endl;
+    top = -1;
+    if (userSize >= DEFAULT) {
+        size = userSize;
+    } else {
+        size = DEFAULT;
+    }
+    stack = new Data *[size];
 }
 
 Stack::~Stack(){
     cout << "destructor test line" << endl;
+    for(int i=top; i>=0; i--){
+        delete stack[i];
+    }
+    delete[] stack; // goes in destructor
 }
 
 // PUSH METHOD
