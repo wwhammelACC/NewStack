@@ -20,7 +20,7 @@ int main(int argc, char **argv) {
      * Remember, you may not use more than one return, even in main()
      * and you may not use exit() or anything like that.
      * ***************************************************************/
-    
+
     /* ***************************************************************
      * Use the number passed in from the command line and declare a stack
      * that uses that number as the size of the stack. NOTE: Make sure
@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
      * pre-defined default value. This will be tested during grading.
      * ***************************************************************/
 
-    
+
     /* ***************************************************************
      * Throughly test your stack. You must perform an exhaustive series
      * of tests on your stack. Show all possible ways your stack can be used
@@ -65,8 +65,23 @@ int main(int argc, char **argv) {
      * designed to break your code. If it can be broken, you risk a
      * substantially reduced grade, up to and including a zero.
      * ***************************************************************/
-    
+
+    //argc is argument count, argv is argument vector
+    // argv is an array of c-string pointers
+    // atoi converts string to integers
     // WHEN YOU SUBMIT, DELETE ALL THESE INSTRUCTIONALCOMMENTS
-    
+    if(argc == 2){
+        bool pos = is_positive_integer(argv[1]);
+        if(size >= 2 && pos == true){
+            // create stack
+            int size = atoi(argv[1]);
+            Stack stack(size);
+            srand(time(NULL));
+
+            cout << std::endl;
+            cout << "Initial Testing of push, peek, pop and isEmpty" << std::endl;
+            cout << std::endl;
+    }
+
     return 0;
 }
