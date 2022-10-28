@@ -37,7 +37,6 @@ public:
     bool pop(Data*); // removing from stack
     bool isEmpty();
 
-    
 private:
 
     /* 
