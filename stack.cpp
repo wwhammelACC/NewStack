@@ -54,6 +54,7 @@ bool Stack::peek(Data *ref){
 // ISEMPTY METHOD
 //ISEMPTY METHOD/FUNCTION
 bool Stack::isEmpty(){
+    cout << "isEmpty test line " << endl;
     return top < 0;
 }
 
