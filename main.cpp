@@ -109,6 +109,12 @@ int main(int argc, char **argv) {
             cout << "Testing peek method.." << endl;
             cout << "Peeking...." << endl;
             stack.peek(userData);
+            if(stack.peek(userData)){
+                cout << "Integer ID " << userData->id << "Information " <<
+                userData->information << endl;
+            }else{
+                cout << "Peek unsuccessful" << endl;
+            }
             cout << endl;
 
             // initial pop testing
