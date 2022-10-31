@@ -38,7 +38,8 @@ bool Stack::push(int id, string *str){  // An asterisk is used in C++ to declare
     // declare pointer for ADT and allocate
     //C++ String empty(). This function checks whether the string is empty or not
     if(top < (size - 1)){
-        if(id > 0 and !str->emptyh()){
+        if(id > 0 and !str->empty()){
+            cout << "allocate ADT test line " << endl;
             // pointer to data struct
             Data *myData;
             //allocate data structure
@@ -49,7 +50,6 @@ bool Stack::push(int id, string *str){  // An asterisk is used in C++ to declare
             push = true;
         }
     }
-
     return push;
 }
 
