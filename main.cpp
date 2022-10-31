@@ -85,17 +85,20 @@ int main(int argc, char **argv) {
 
             // initial push testing
             string strtemp;
-            int i = 1;
-            stack.push(i, &strtemp);
-            for(int i=1; i<size; i++){
-                rand_string(&strtemp); //  Use & to get the address of a variable
-                if(strtemp.empty() || i<0){
-                    std::cout << "Error. Int for id must be greater than 0 "
-                                 "and string information cannot be empty." << std::endl;
-                }else{
-                    stack.push(i, &strtemp);
+            for(int i=1; i<size; i++) {
+                rand_string(&strtemp); // generate random string
+                if(strtemp.empty() || i<0){ // if string is empty or i less than 0
+                    cout << "Error. Int for id must be greater than 0 and string information cannot be empty." << std::endl;
                 }
-
+                else if (stack.push(i, &strtemp)) { // other wise push int i and random string
+                    cout << "Pushing: ";
+                    cout << "Integer ID: " << i << " Info: " << strtemp << endl;
+                    cout << "Pushed Element! " << endl;
+                }
+                else { // look up
+                    cout << "Overflow Error! " << endl;
+                }
+                cout << std::endl;
             }
             cout << endl;
 
