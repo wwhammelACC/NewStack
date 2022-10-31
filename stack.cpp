@@ -82,7 +82,7 @@ bool Stack::peek(Data *ref){
 
 // ISEMPTY METHOD/FUNCTION
 bool Stack::isEmpty(){
-    cout << "isEmpty test line " << endl;
+    //cout << "isEmpty test line " << endl;
     return top < 0;
 }
 
