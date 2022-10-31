@@ -103,7 +103,7 @@ int main(int argc, char **argv) {
             cout << endl;
 
             // initial testing if stack is empty
-            if(stack.isEmpty){
+            if(stack.isEmpty()){
                 cout << "Stack is empty " << endl;
             }else{
                 cout << "Stack is NOT empty " << endl;
