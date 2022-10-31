@@ -71,8 +71,8 @@ int main(int argc, char **argv) {
     // atoi converts string to integers
     // WHEN YOU SUBMIT, DELETE ALL THESE INSTRUCTIONALCOMMENTS
     if(argc == 2){
-        int size = atoi(argv[1]);
         bool pos = is_positive(argv[1]); // tests that input is positive
+        int size = atoi(argv[1]);
         if(size >= 2 && pos == true){
             // create stack
             int size = atoi(argv[1]);
@@ -102,6 +102,13 @@ int main(int argc, char **argv) {
             }
             cout << endl;
 
+            // initial testing if stack is empty
+            if(stack.isEmpty){
+                cout << "Stack is empty " << endl;
+            }else{
+                cout << "Stack is NOT empty " << endl;
+            }
+
             // initial peek testing
             Data *userData; // create variable pointer to empty Data struct
             userData = new Data; // userData is empty struct
@@ -110,7 +117,7 @@ int main(int argc, char **argv) {
             cout << "Peeking...." << endl;
             stack.peek(userData);
             if(stack.peek(userData)){
-                cout << "Integer ID " << userData->id << "Information " <<
+                cout << "Integer ID " << userData->id << " Information " <<
                 userData->information << endl;
             }else{
                 cout << "Peek unsuccessful" << endl;
