@@ -33,13 +33,13 @@ Stack::~Stack(){
 
 bool Stack::push(int id, string *str){  // An asterisk is used in C++ to declare a pointer. Pointers allow you to refer directly to values
     bool push = false;
-    cout << "push test line " << endl;
+    //cout << "push test line " << endl;
     // if id > 0 and string is not empty
     // declare pointer for ADT and allocate
     //C++ String empty(). This function checks whether the string is empty or not
     if(top < (size - 1)){
         if(id > 0 and !str->empty()){
-            cout << "allocate ADT test line " << endl;
+            //cout << "allocate ADT test line " << endl;
             // pointer to data struct
             Data *myData;
             //allocate data structure
@@ -63,14 +63,16 @@ bool Stack::pop(Data *ref){
 // PEEK METHOD
 bool Stack::peek(Data *ref){
     bool peek = false;
-    cout << "peek method test line " << endl;
+   // cout << "peek method test line " << endl;
     if(!isEmpty()){     // if not empty
         //getting info from top of stack and putting it in data struct
+        cout << "peek method not empty " << endl;
         ref->id = stack[top]->id;
         ref->information = stack[top]->information;
         //'return data to caller'
         peek = true;
     }else{
+        cout << "peek method is empty filling" << endl;
         //fill passed data struct with -1, empty string
         ref->id = -1;
         ref->information = "";
@@ -78,8 +80,7 @@ bool Stack::peek(Data *ref){
     return peek;
 }
 
-// ISEMPTY METHOD
-//ISEMPTY METHOD/FUNCTION
+// ISEMPTY METHOD/FUNCTION
 bool Stack::isEmpty(){
     cout << "isEmpty test line " << endl;
     return top < 0;
