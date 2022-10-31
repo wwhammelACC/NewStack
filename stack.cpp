@@ -31,10 +31,11 @@ Stack::~Stack(){
 
 // PUSH METHOD
 
-bool Stack::push(int id, std::string *str){
-    bool pushed = false;
+bool Stack::push(int id, string *str){  // An asterisk is used in C++ to declare a pointer. Pointers allow you to refer directly to values
+    bool push = false;
     cout << "push test line " << endl;
-    return pushed;
+    // if id > 0 and string is not empty
+    return push;
 }
 
 // POP METHOD
