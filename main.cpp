@@ -71,8 +71,6 @@ int main(int argc, char **argv) {
     // atoi converts string to integers
     // WHEN YOU SUBMIT, DELETE ALL THESE INSTRUCTIONALCOMMENTS
     if(argc == 2){
-        Data *userData; // create variable pointer to empty Data struct
-
         bool pos = is_positive(argv[1]); // tests that input is positive
         int size = atoi(argv[1]);
         if(size >= 2 && pos == true){
@@ -112,12 +110,11 @@ int main(int argc, char **argv) {
             }
 
             // initial peek testing
-            //Data *userData; // create variable pointer to empty Data struct
+            Data *userData; // create variable pointer to empty Data struct
             userData = new Data; // userData is empty struct
             cout << endl;
             cout << "Testing peek method.." << endl;
             cout << "Peeking...." << endl;
-            stack.peek(userData);
             if(stack.peek(userData)){
                 cout << "Integer ID " << userData->id << " Information " <<
                 userData->information << endl;
@@ -127,16 +124,20 @@ int main(int argc, char **argv) {
             cout << endl;
 
             // initial pop testing
-            cout << "Testing pop method.. " << endl;
-            stack.pop(userData);
-            cout << endl;
-
-            // initial isEmpty testing
-            cout << "Testing isEmpty method.. " << endl;
-            stack.isEmpty();
+//            Data *userData2; // create variable pointer to empty Data struct
+//            userData2 = new Data; // userData is empty struct i think
+            for(int i; i<size; i++){
+                Data *userData2; // create variable pointer to empty Data struct
+                userData2 = new Data; // userData is empty struct i think
+                cout << "Testing pop method.. " << endl;
+                if(stack.pop(userData2)){
+                    cout << "Pop successful! " << endl;
+                }else{
+                    cout << "Underflow Error! " << endl;
+                }
+            }
             cout << endl;
         }
-
     }
 
     return 0;
