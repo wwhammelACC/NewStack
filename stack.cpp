@@ -37,9 +37,8 @@ bool Stack::push(int id, string *str){  // An asterisk is used in C++ to declare
     // if id > 0 and string is not empty
     // declare pointer for ADT and allocate
     //C++ String empty(). This function checks whether the string is empty or not
-
     //if(top < (size - 1)){
-    if(top < (size - 1)){
+    if(top < (size -1)){
         if(id > 0 and !str->empty()){
             //cout << "allocate ADT test line " << endl;
             // pointer to data struct
@@ -48,13 +47,13 @@ bool Stack::push(int id, string *str){  // An asterisk is used in C++ to declare
             myData = new Data;
             myData->id = id;
             myData->information = *str;
-            cout << "getting what is in top before counter increment " << endl;
-            cout << top << endl;
-            cout << endl;
+//            cout << "getting what is in top before counter increment " << endl;
+//            cout << top << endl;
+//            cout << endl;
             stack[++top] = myData; // incrementing stack counter preincrement
-            cout << "getting what is in top aft3er counter increment " << endl;
-            cout << top << endl;
-            cout << endl;
+//            cout << "getting what is in top aft3er counter increment " << endl;
+//            cout << top << endl;
+//            cout << endl;
             push = true;
         }
     }
