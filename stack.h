@@ -13,6 +13,7 @@
 
 #include "data.h"
 #include <iostream>     /* cout, endl */
+#include <string>     /* string */
 
 #define DEFAULT 2
 
