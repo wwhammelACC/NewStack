@@ -12,7 +12,7 @@
 
 Stack::Stack(int userSize){
     cout << "constructor test line " << endl;
-    top = -1;
+    top = -1; // setting stack to empty by setting top = -1
     if (userSize >= DEFAULT) {
         size = userSize;
     } else {
@@ -37,6 +37,8 @@ bool Stack::push(int id, string *str){  // An asterisk is used in C++ to declare
     // if id > 0 and string is not empty
     // declare pointer for ADT and allocate
     //C++ String empty(). This function checks whether the string is empty or not
+
+    //if(top < (size - 1)){
     if(top < (size - 1)){
         if(id > 0 and !str->empty()){
             //cout << "allocate ADT test line " << endl;
@@ -46,7 +48,13 @@ bool Stack::push(int id, string *str){  // An asterisk is used in C++ to declare
             myData = new Data;
             myData->id = id;
             myData->information = *str;
-            stack[++top] = myData;
+            cout << "getting what is in top before counter increment " << endl;
+            cout << top << endl;
+            cout << endl;
+            stack[++top] = myData; // incrementing stack counter preincrement
+            cout << "getting what is in top aft3er counter increment " << endl;
+            cout << top << endl;
+            cout << endl;
             push = true;
         }
     }
@@ -54,9 +62,21 @@ bool Stack::push(int id, string *str){  // An asterisk is used in C++ to declare
 }
 
 // POP METHOD
-bool Stack::pop(Data *ref){
+bool Stack::pop(Data *ref){ // ref points to the int and string in data struct
     bool popped = false;
     cout << "pop method test line " << endl;
+    if(!isEmpty()){  // if not empty
+        // getting info from top of stack and putting it in data struct
+        ref->id = stack[top]->id;
+        ref->information = stack[top]->information;
+        //delete allocated memory
+        delete stack[top];
+        top--; // decrementing counter post decrement
+        popped = true;
+    }else{
+        ref->id = -1;
+        ref->information = "";
+    }
     return popped;
 }
 
@@ -83,6 +103,6 @@ bool Stack::peek(Data *ref){
 // ISEMPTY METHOD/FUNCTION
 bool Stack::isEmpty(){
     //cout << "isEmpty test line " << endl;
-    return top < 0;
+    return top < 0; // basically true if stack is empty
 }
 
