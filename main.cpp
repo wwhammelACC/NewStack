@@ -71,6 +71,8 @@ int main(int argc, char **argv) {
     // atoi converts string to integers
     // WHEN YOU SUBMIT, DELETE ALL THESE INSTRUCTIONALCOMMENTS
     if(argc == 2){
+        Data *userData; // create variable pointer to empty Data struct
+
         bool pos = is_positive(argv[1]); // tests that input is positive
         int size = atoi(argv[1]);
         if(size >= 2 && pos == true){
@@ -110,7 +112,7 @@ int main(int argc, char **argv) {
             }
 
             // initial peek testing
-            Data *userData; // create variable pointer to empty Data struct
+            //Data *userData; // create variable pointer to empty Data struct
             userData = new Data; // userData is empty struct
             cout << endl;
             cout << "Testing peek method.." << endl;
