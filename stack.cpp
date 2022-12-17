@@ -1,6 +1,6 @@
 /*
- * Your comment header here
- * modify this file as needed to complete the assignment
+ * Stack Source Code File
+ *
  */
 
 // each cpp includes ONLY it's header directly
