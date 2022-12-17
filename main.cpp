@@ -1,5 +1,5 @@
 /*
- * your header here
+ * Main Source Code File
  * 
  */
 
@@ -69,7 +69,6 @@ int main(int argc, char **argv) {
     //argc is argument count, argv is argument vector
     // argv is an array of c-string pointers
     // atoi converts string to integers
-    // WHEN YOU SUBMIT, DELETE ALL THESE INSTRUCTIONALCOMMENTS
     if(argc == 2){
         bool pos = is_positive(argv[1]); // tests that input is positive
         int size = atoi(argv[1]);
@@ -103,7 +102,7 @@ int main(int argc, char **argv) {
             }
             cout << endl;
 
-            // initial testing if stack is empty
+            // initial is empty testing
             if(stack.isEmpty()){
                 cout << "Stack is empty " << endl;
             }else{
@@ -129,7 +128,7 @@ int main(int argc, char **argv) {
 //            userData2 = new Data; // userData is empty struct i think
             for(int i; i<size; i++){
                 Data *userData2; // create variable pointer to empty Data struct
-                userData2 = new Data; // userData is empty struct i think
+                userData2 = new Data; // userData is empty struct
                 cout << "Testing pop method.. " << endl;
                 if(stack.pop(userData2)){
                     cout << "Pop successful! " << endl;
