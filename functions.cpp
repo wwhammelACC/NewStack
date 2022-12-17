@@ -1,6 +1,6 @@
 /*
- * Your comment header here
- * modify this file as needed to complete the assignment
+ * Functions Source Code File
+ *
  */
 
 #include "functions.h"
@@ -13,8 +13,8 @@ void rand_string(std::string *str){
     char *buffer = new char[rnum+1];
 
     // fill buffer with random characters A to Z
-    int i = 0;
-    for(; i < rnum; i++){
+    int i;
+    for(int i = 0; i < rnum; i++){
         buffer[i] = (rand() % ('Z' - 'A' + 1)) + 'A';
     }
     buffer[i] = '\0';

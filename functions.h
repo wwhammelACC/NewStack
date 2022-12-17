@@ -1,6 +1,6 @@
 /*
- * Your comment header here
- * modify this file as needed to complete the assignment
+ * Functions Header
+ *
  */
 
 #ifndef STACKS_FUNCTIONS_H
@@ -9,7 +9,6 @@
 #define MAXSTRSIZE 8
 
 #include <stdlib.h>   /* srand, rand */
-#include <time.h>     /* time */
 #include <time.h>     /* time */
 #include <string>     /* string */
 
