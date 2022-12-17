@@ -1,15 +1,11 @@
 /*
- * Your comment header here
- * modify this file as needed to complete the assignment
+ * Stack Header
+ *
  */
 
 #ifndef STACK_H
 #define STACK_H
 
-/*
- * there are no other includes here because they are not needed.
- * if you do need other things included, they would go here
- */
 
 #include "data.h"
 #include <iostream>     /* cout, endl */
@@ -26,23 +22,24 @@ class Stack {
 public:
 
     /* 
-     * write all your public method prototypes here
+     * public method prototypes
      * this includes you constructor and destructor
      */
+
     //constructor
     Stack(int);
     //destructor
     ~Stack();
     
-    bool push(int, string*); // pushing intergers and strings
-    bool peek(Data*); // looking whats in stack
+    bool push(int, string*); // pushing integers and strings
+    bool peek(Data*); // looking at what's in stack
     bool pop(Data*); // removing from stack
     bool isEmpty();
 
 private:
 
     /* 
-     * write all your private method prototypes here
+     * private method prototypes
      */
 
     // these are the only attributes you need.
